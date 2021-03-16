@@ -6,8 +6,15 @@ namespace Converter
     {
         static void Main(string[] args)
         {
-            double rubToUsd = 0.013, rubToEuro = 0.011, usdToRub = 74.61, usdToEuro = 0.83, euroToUsd = 1.2, euroToRub = 89.65;
-            double rub = 1000, usd = 80, euro = 50;
+            double rubToUsd = 0.013, 
+            rubToEuro = 0.011,
+            usdToRub = 74.61,
+            usdToEuro = 0.83,
+            euroToUsd = 1.2,
+            euroToRub = 89.65;
+            double rub = 1000,
+            usd = 80,
+            euro = 50;
             int userInput;
             double swap;
 
@@ -26,6 +33,7 @@ namespace Converter
                         swap = Convert.ToDouble(Console.ReadLine());
                         if (rub - swap < 0) 
                             {
+                            rub = rub + swap;
                             Console.WriteLine("Операция невозможна, недостаточно средств");
                             }
                             else
@@ -41,6 +49,7 @@ namespace Converter
                         swap = Convert.ToDouble(Console.ReadLine());
                         if (rub - swap < 0)
                         {
+                            rub = rub + swap;
                             Console.WriteLine("Операция невозможна, недостаточно средств");
                         }
                         else
@@ -56,7 +65,8 @@ namespace Converter
                         swap = Convert.ToDouble(Console.ReadLine());
                         if (usd - swap < 0)
                         {
-                             Console.WriteLine("Операция невозможна, недостаточно средств");
+                            usd = usd + swap;
+                            Console.WriteLine("Операция невозможна, недостаточно средств");
                         }
                         else
                         {
@@ -71,6 +81,7 @@ namespace Converter
                         swap = Convert.ToDouble(Console.ReadLine());
                         if (usd - swap < 0)
                         {
+                            usd = usd + swap;
                             Console.WriteLine("Операция невозможна, недостаточно средств");
                         }
                         else
@@ -86,6 +97,7 @@ namespace Converter
                         swap = Convert.ToDouble(Console.ReadLine());
                         if (euro - swap < 0)
                         {
+                            euro = euro + swap;
                             Console.WriteLine("Операция невозможна, недостаточно средств");
                         }
                         else
@@ -101,6 +113,7 @@ namespace Converter
                         swap = Convert.ToDouble(Console.ReadLine());
                         if (euro - swap < 0)
                         {
+                            euro = euro + swap;
                             Console.WriteLine("Операция невозможна, недостаточно средств");
                         }
                         else
